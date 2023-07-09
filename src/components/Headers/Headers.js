@@ -19,8 +19,8 @@ export default function Headers() {
       id: "About",
     },
     {
-      label: "Portfolio",
-      id: "Portfolio",
+      label: "Events",
+      id: "Events",
     },
     {
       label: "Contact",
@@ -38,21 +38,18 @@ export default function Headers() {
       />
       <Box className="header-container">
         <Typography variant="h3" className="header-title">
-          Hi! I'm a{" "}
+          Global Seerah Forum
+        </Typography>
+        <Typography variant="h4" className="header-description">
           <ReactTyped
-            strings={[`Web Developer`, "Mobile Developer"]}
+            strings={["Come to Uswa E Hasna"]}
             typeSpeed={70}
             backSpeed={80}
             loop
           />
         </Typography>
-        <Typography variant="h4" className="header-description">
-          I create Websites and Applications,
-          <br />
-          Based On Your Needs...
-        </Typography>
         <Decorator
-          label="About Me"
+          label="About Us"
           withIcon={true}
           icon={<ArrowDownwardRoundedIcon />}
         />

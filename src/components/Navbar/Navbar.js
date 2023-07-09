@@ -2,11 +2,10 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { downloadResume } from "../../utils/helpers";
+import logo from "../../assets/gsf-logo.jpeg";
 
 export default function ButtonAppBar({ navLinksList, handleToggle }) {
   const handleNavItemClick = (navItemId) => {
@@ -16,26 +15,14 @@ export default function ButtonAppBar({ navLinksList, handleToggle }) {
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
-  const onDownloadResume = () => {
-    downloadResume();
-  };
 
   return (
     <Box sx={{ flexGrow: 1 }} className="navbar-root">
       <AppBar position="fixed" className="navbar">
         <Toolbar className="toolbar">
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            {"<HELLO WORLD/>"}
-          </Typography>
+          <img src={logo} alt="logo" />
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Box>
-              <Button
-                color="inherit"
-                className="navLink"
-                onClick={onDownloadResume}
-              >
-                Resume
-              </Button>
               {navLinksList.map((navLink, index) => (
                 <Button
                   key={index}

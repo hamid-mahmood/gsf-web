@@ -1,7 +1,7 @@
 import Headers from "./components/Headers/Headers";
 import "./App.scss";
 import AboutUs from "./components/BodyComponents/AboutUs";
-import Portfolio from "./components/BodyComponents/Portfolio";
+import Events from "./components/BodyComponents/Events";
 import Contact from "./components/BodyComponents/Contact";
 import Footer from "./components/BodyComponents/Footer";
 import { SnackbarProvider } from "notistack";
@@ -14,7 +14,7 @@ function App() {
     <>
       <Headers />
       <AboutUs />
-      <Portfolio />
+      <Events />
       <SnackbarProvider maxSnack={3}>
         <Contact />
       </SnackbarProvider>

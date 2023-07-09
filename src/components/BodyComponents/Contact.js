@@ -1,7 +1,7 @@
 import { Box, Container, Grid, TextField } from "@mui/material";
 import React, { useRef, useState } from "react";
 import SectionHeading from "../common/SectionHeading";
-import Image from "../../assets/contactus.jpg";
+import Image from "../../assets/about-banner.jpeg";
 import ScrollAnimation from "react-animate-on-scroll";
 import emailjs from "@emailjs/browser";
 import { EMAIL_CONSTANTS_ENUM } from "../../configs/applicationConstants";
@@ -107,9 +107,9 @@ const Contact = () => {
             </Grid>
             <Grid item xs={12} sm={7}>
               <SectionHeading
-                label="Contact Me"
-                heading="Seems to be Interesting"
-                description="Got my portfolio seen, than feel free to contact me for your future projects"
+                label="Contact Us"
+                heading="Lorem ipsum dolor sit amet"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque dui nulla, vel tincidunt enim lobortis eget"
               />
               <br />
               <form onSubmit={handleSubmit}>
@@ -192,6 +192,7 @@ const Contact = () => {
                       type="submit"
                       fullWidth
                       className="submit-btn"
+                      disabled
                     >
                       Submit
                     </LoadingButton>

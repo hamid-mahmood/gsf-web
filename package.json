@@ -1,6 +1,6 @@
 {
   "homepage": "https://hamid-mahmood.github.io/portfolio/",
-  "name": "portfolio",
+  "name": "GSF",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
     "react-scripts": "5.0.1",
     "react-typed": "^1.2.0",
     "sass": "^1.62.1",
+    "swiper": "^10.0.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -28,7 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

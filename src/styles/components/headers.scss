@@ -3,18 +3,19 @@
   min-height: 100vh;
   height: auto;
   background: linear-gradient(to bottom right, #04303140, #090b0b73),
-    url("../../assets/cover-image-min.jpg");
+    url("../../assets/banner.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 
   .header-container {
-    min-height: 90vh;
+    min-height: 100vh;
     height: auto;
     display: flex;
     flex-flow: column wrap;
     padding: 18px;
     color: var(--base-2);
     justify-content: center;
+    align-items: center;
     .header-title {
       font-size: 4rem;
       @media (max-width: 600px) {
