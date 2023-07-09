@@ -1,8 +1,4 @@
-import React from "react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import SwiperCore from "swiper";
-
+import React, { useEffect, useState } from "react";
 // import Swiper core and required modules
 import {
   Autoplay,
@@ -11,24 +7,43 @@ import {
   Scrollbar,
   A11y,
 } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import gsf from "../../assets/gsf-logo.jpeg";
-
 const Slider = ({ slides }) => {
+  const [slidesCount, setSlidesCount] = useState(3);
+  useEffect(() => {
+    const mediaHanlder = (x) => {
+      if (x.matches) {
+        setSlidesCount(2);
+      } else {
+        setSlidesCount(3);
+      }
+    };
+
+    const mediaQueryObj = window.matchMedia("(max-width: 991px)");
+    mediaHanlder(mediaQueryObj);
+
+    const mediaQueryListener = (event) => {
+      mediaHanlder(event.target);
+    };
+
+    mediaQueryObj.addEventListener("change", mediaQueryListener);
+
+    return () => {
+      mediaQueryObj.removeEventListener("change", mediaQueryListener);
+    };
+  }, []);
   return (
     <Swiper
       // install Swiper modules
       modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
-      slidesPerView={3}
+      slidesPerView={slidesCount}
       navigation
       // pagination={{ clickable: true }}
       // scrollbar={{ draggable: true }}
@@ -37,11 +52,10 @@ const Slider = ({ slides }) => {
         delay: 3000,
         disableOnInteraction: false,
       }}
-      onSlideChange={() => console.log("slide change")}
+      // onSlideChange={() => console.log("slide change")}
     >
       {slides.map((item, index) => (
         <SwiperSlide key={index}>
-          {" "}
           <img
             src={item}
             style={{
