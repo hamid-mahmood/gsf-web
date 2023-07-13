@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/gsf-web/static/css/main.8d8954ba.css",
+    "main.js": "/gsf-web/static/js/main.db04180f.js",
+    "static/media/event-1.jpeg": "/gsf-web/static/media/event-1.2e33bb1fbef97f323c27.jpeg",
+    "static/media/event-2.jpeg": "/gsf-web/static/media/event-2.77df856aa9480cdf875d.jpeg",
+    "static/media/banner.jpeg": "/gsf-web/static/media/banner.7ba29947361149bb0a99.jpeg",
+    "static/media/about-banner.jpeg": "/gsf-web/static/media/about-banner.feb40648d1605b90b6e8.jpeg",
+    "index.html": "/gsf-web/index.html",
+    "main.8d8954ba.css.map": "/gsf-web/static/css/main.8d8954ba.css.map",
+    "main.db04180f.js.map": "/gsf-web/static/js/main.db04180f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d8954ba.css",
+    "static/js/main.db04180f.js"
+  ]
+}
